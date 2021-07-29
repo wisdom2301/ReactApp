@@ -9,6 +9,10 @@ import './App Component/First.css';
 import Product from './App Component/Product';
 import Products from './App Component/Products'
 import { useState } from 'react';
+import { Switch, Route, Link, NavLink } from "react-router-dom";
+import About from './Pages/About'
+import Home from './Pages/Home';
+import Contact from './Pages/Contact';
 
 function App() {
   const products = {
@@ -62,7 +66,25 @@ alert(`${products.Title}, ${products.Price} added to cart`);
         <Products myCount = {count} handleClick = {handleClick} />
 
         <br></br>
+        
 
+        <nav>
+          <NavLink to="/" activeClassName="selected">Home</NavLink>
+          <NavLink to = "/about" activeClassName="selected">About</NavLink>
+        <NavLink to="/contact" activeClassName="selected">Contact</NavLink>
+        </nav>
+<h1>Hello Wisdom!</h1>
+<Switch>
+<Route path="/about">
+  <About />
+</Route>
+<Route path="/contact">
+  <Contact />
+</Route>
+<Route path="/">
+  <Home />
+</Route>
+</Switch>
     </div>
   );
 }

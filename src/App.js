@@ -13,6 +13,8 @@ import { Switch, Route, Link, NavLink } from "react-router-dom";
 import About from './Pages/About'
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
+import Forms from './App Component/Forms';
+import RouteParam from './App Component/RouteParam';
 
 function App() {
   const products = {
@@ -85,6 +87,20 @@ alert(`${products.Title}, ${products.Price} added to cart`);
   <Home />
 </Route>
 </Switch>
+<br></br>
+
+<Forms />
+<br />
+
+<div>
+  <NavLink to = "/product">Product</NavLink>
+<Route path = "/product/:id">
+  <RouteParam />
+</Route>
+</div>
+
+
+
     </div>
   );
 }

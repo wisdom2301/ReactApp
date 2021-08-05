@@ -9,7 +9,7 @@ import './App Component/First.css';
 import Product from './App Component/Product';
 import Products from './App Component/Products'
 import { useState } from 'react';
-import { Switch, Route, Link, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink } from "react-router-dom";
 import About from './Pages/About'
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
